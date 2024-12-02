@@ -4,33 +4,47 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="calc.css" />
-		<title>Document</title>
+		<title>Dave's Calculator</title>
 	</head>
 	<body>
-		<div id="display" onload="clearScreen()"></div>
-		<div id="calculator">
-			<div id="buttons">
-				<button class="calc_button" id="clear" onClick="clearScreen()">
-					AC
-				</button>
-				<button class="calc_button" id="" onClick="deleteLast()">DEL</button>
-				<button class="calc_button" id="" onClick="setOperator('%')">%</button>
-				<button class="calc_button" id="" onClick="">/</button>
-				<button class="number" id="" onClick="logNumber(7)">7</button>
-				<button class="number" id="" onClick="logNumber(8)">8</button>
-				<button class="number" id="" onClick="logNumber(9)">9</button>
-				<button class="calc_button" id="" onClick="">*</button>
-				<button class="number" id="" onClick="logNumber(4)">4</button>
-				<button class="number" id="" onClick="logNumber(5)">5</button>
-				<button class="number" id="" onClick="logNumber(6)">6</button>
-				<button class="calc_button" id="" onClick="">-</button>
-				<button class="number" id="" onClick="logNumber(1)">1</button>
-				<button class="number" id="" onClick="logNumber(2)">2</button>
-				<button class="number" id="" onClick="logNumber(3)">3</button>
-				<button class="calc_button" id="" onClick="">+</button>
-				<button class="number" id="zero" onClick="logNumber(0)">0</button>
-				<button class="calc_button" id="" onClick="">.</button>
-				<button class="calc_button" id="" onClick="">=</button>
+		<div id="app">
+			<div id="display" onload="clearScreen()"></div>
+			<div id="calculator">
+				<div id="buttons">
+					<button class="calc_button" id="AC" onClick="clearScreen()">
+						AC
+					</button>
+					<button class="calc_button" id="DEL" onClick="deleteLast()">
+						DEL
+					</button>
+					<button class="calc_button" id="MOD" onClick="addInput('%')">
+						%
+					</button>
+					<button class="calc_button" id="DIV" onClick="addInput('/')">
+						/
+					</button>
+					<button class="number" id="" onClick="addInput(7)">7</button>
+					<button class="number" id="" onClick="addInput(8)">8</button>
+					<button class="number" id="" onClick="addInput(9)">9</button>
+					<button class="calc_button" id="MULT" onClick="addInput('*')">
+						x
+					</button>
+					<button class="number" id="" onClick="addInput(4)">4</button>
+					<button class="number" id="" onClick="addInput(5)">5</button>
+					<button class="number" id="" onClick="addInput(6)">6</button>
+					<button class="calc_button" id="MIN" onClick="addInput('-')">
+						-
+					</button>
+					<button class="number" id="" onClick="addInput(1)">1</button>
+					<button class="number" id="" onClick="addInput(2)">2</button>
+					<button class="number" id="" onClick="addInput(3)">3</button>
+					<button class="calc_button" id="PLUS" onClick="addInput('+')">
+						+
+					</button>
+					<button class="number" id="zero" onClick="addInput(0)">0</button>
+					<button class="calc_button" id="COMMA" onClick="">.</button>
+					<button class="calc_button" id="EQUAL" onClick="calculate()">=</button>
+				</div>
 			</div>
 		</div>
 		<script src="calc.js" async defer></script>
