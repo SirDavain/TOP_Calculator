@@ -1,9 +1,13 @@
-function test(arr) {
-	console.log(arr);
-	arr = arr.toString().split("").slice(0, 6).join("");
-	console.log(arr);
+function test(input, text) {
+	let text2 = "mate";
+	input.push("there");
+	input.concat(input[2], text);
+	let result = text.concat(" ", text2);
+	console.log("Input:", input);
+	console.log("Result:", result);
 }
 
-let string = "hello";
-let arr = [2.123456789];
-test(arr);
+let text = "hello";
+let input = [];
+input.push("hi");
+test(input, text);
